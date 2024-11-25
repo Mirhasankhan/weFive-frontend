@@ -3,9 +3,9 @@ import user from "../../assets/images/handsome.png";
 import { Rating } from "@smastrom/react-rating";
 import { GoThumbsup } from "react-icons/go";
 import { Progress } from "antd";
-import Card from "./Card";
+import Card, { TProduct } from "./Card";
 
-const ProductDetails = ({ product }) => {
+const ProductDetails = ({ product }: { product: TProduct }) => {
   return (
     <div>
       <div className="flex items-center gap-12">

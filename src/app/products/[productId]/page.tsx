@@ -5,7 +5,7 @@ import { Rating } from "@smastrom/react-rating";
 import Image from "next/image";
 import React, { useEffect, useState } from "react";
 
-const Product = ({ params }) => {
+const Product = ({ params }: any) => {
   const [product, setProduct] = useState([]);
 
   useEffect(() => {
@@ -15,7 +15,7 @@ const Product = ({ params }) => {
       .catch((error) => console.error("Error fetching data:", error));
   }, []);
   const p = product.filter((p: TProduct) => p._id == params.productId);
-  const currentProduct = p["0"];
+  const currentProduct: TProduct = p["0"];
   return (
     <div className="px-4 md:px-16 pt-8 bg-[#F4F8FF] min-h-screen">
       <div className="grid grid-cols-2 gap-6 ">
